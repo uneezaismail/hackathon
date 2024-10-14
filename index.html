@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="resume.css">
+</head>
+<body>
+    <div id="main-div">
+        <h1 id="form-name">Smart Resume Hub</b></h1>
+        <h3 class="made-by">by Uneeza ismail</h3>
+    <br>
+
+    <form id="resume-form" action="" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <div class="form-group">
+          <label for="fname" class="name">First Name:</label>
+          <input type="text" id="fname" placeholder="e.g: John" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="lname" class="name">Last Name:</label>
+          <input type="text" id="lname" placeholder="e.g: Smith" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone" class="name extra">Phone Number:</label>
+          <input type="tel" name="phone" id="phone" placeholder="e.g: 123-456-7890" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="mail" class="name">Email:</label>
+          <input type="email" name="mail" id="mail" placeholder="e.g: example@gmail.com" required>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Education</legend>
+        <div class="form-group">
+          <label for="deg" class="name">Degree:</label>
+          <input type="text" name="deg" id="deg" placeholder="e.g: Bachelor of Science" required>
+        </div>
+
+        <div class="form-group">
+          <label for="inst" class="name">Institute:</label>
+          <input type="text" name="inst" id="inst" placeholder="e.g: University Name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="deg-year" class="name">Year:</label>
+          <input type="text" name="deg-year" id="deg-year" placeholder="e.g: 2024" required>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional Information</legend>
+        <div class="form-group">
+          <label for="skill" class="name">Skills:</label>
+          <textarea name="exp"  id="skill" placeholder="List your skills" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="exp" class="name extra">Work Experience:</label>
+          <textarea name="exp" id="exp" placeholder="Describe your previous roles and achievements" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="about" class="name">About Me:</label>
+          <textarea name="about" id="about" placeholder="Tell us about yourself" required></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Profile Image</legend>
+        <div class="form-group">
+          <label for="photo" class="name">Profile Image:</label>
+          <div class="image-container">
+            <img src="./profile-img.webp" alt="profile img" id="img">
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="button-div">
+        <button type="submit" onclick="generateResume()">GENERATE RESUME</button>
+        <button type="reset">Reset</button>
+      </div>
+
+    </form>
+
+        
+    <div class="resume"></div>
+  </div>
+</div>
+    
+</body>
+<script src="dist/resume.js"></script>
+</html>
